@@ -1,6 +1,6 @@
 # data-skills-01
 
-## Lesson Overview
+## Session Overview
 
 ### Objectives
 At the end of this lesson, participants should be able to:
@@ -16,6 +16,8 @@ At the end of this lesson, participants should be able to:
 
 ### Extra Resources
 * [RStudio cheatsheet](https://www.rstudio.com/resources/cheatsheets/#ide)
+* [Markdown Syntax](https://rmarkdown.rstudio.com/authoring_basics.html)
+* [RStudio Community](https://community.rstudio.com)
 * [*R for Data Science*](http://r4ds.had.co.nz)
 
 ## Access Lesson
