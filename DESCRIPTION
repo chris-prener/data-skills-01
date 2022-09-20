@@ -1,0 +1,17 @@
+Package: data-skills-01
+Title: Data Skills 1 - Introduction to RStudio and R Projects
+Version: 0.1.0
+Authors@R: person("Christopher", "Prener", email = "chris.prener@slu.edu", role = c("aut", "cre"))
+Description: This lesson covers the basics of using RStudio as a GUI for R as well
+    as the .Rproj file format used by RStudio for managing the working directory.
+Depends: R (>= 3.5)
+License: CC-BY-SA-4.0 + LICENSE
+Web: https://slu-dss.github.io
+URL: https://github.com/chris-prener/data-skills-01
+BugReports: https://github.com/chris-prener/data-skills-01/issues
+Imports:
+    cowsay,
+    knitr,
+    palmerpenguins,
+    rmarkdown,
+    usethis
