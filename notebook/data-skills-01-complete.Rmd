@@ -33,6 +33,11 @@ For less involved projects, I often use an `R` script instead. These files can b
 
 By default, RStudio wants to save the state of environment. I generally think this is not a good practice from a reproducibility standpoint. To disable, go to Preferences and then, under the Workspace section of the General tab on the left, un-check "Restore .RData into workspace at startup" and set "Save workspace to .RData on exit" to "Never".
 
+To find Preferences:
+
+  * On macOS - go to `RStudio > Preferences...`
+  * On Windows - go to `Tools > Global Options...`
+
 ### Using Themes
 
 The Preferences panel also includes the option to change the appearance of your RStudio windows. Choose the Appearance tab on the left, and use the "Editor Theme" section to pick a different theme if you would like.

@@ -35,7 +35,7 @@ With the package installed, you you can download this lesson to your Desktop eas
 usethis::use_course("https://github.com/chris-prener/data-skills-01/archive/master.zip")
 ```
 
-By using `usethis::use_course`, all of the lesson materials will be downloaded to your computer, automatically extracted, and saved to your desktop. The `data-skills-01-master` project should open automatically afterwards.
+By using `usethis::use_course`, all of the lesson materials will be downloaded to your computer, automatically extracted, and saved to your desktop. The `data-skills-01-master` project should open automatically afterwards. Windows users will have the data downloaded to their user folder (e.g. `C:/Users/<USERNAME>/`)
 
 ### Install Other Packages for Today
 In addition to `usethis`, there are a couple of other packages we'll need:

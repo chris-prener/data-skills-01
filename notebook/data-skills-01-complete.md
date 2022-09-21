@@ -61,6 +61,11 @@ disable, go to Preferences and then, under the Workspace section of the
 General tab on the left, un-check “Restore .RData into workspace at
 startup” and set “Save workspace to .RData on exit” to “Never”.
 
+To find Preferences:
+
+-   On macOS - go to `RStudio > Preferences...`
+-   On Windows - go to `Tools > Global Options...`
+
 ### Using Themes
 
 The Preferences panel also includes the option to change the appearance
