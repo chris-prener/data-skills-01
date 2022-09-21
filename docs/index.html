@@ -749,10 +749,6 @@ contents:</p>
 <p>We’ve got two variables - one named <code>eruptions</code> and one
 named <code>waiting</code>. A <strong>data frame</strong> is a
 collection of vectors that all have the same length.</p>
-<p>Next, we can use <code>View()</code> to open a spreadsheet like view
-of the data. Type this down in your console - it is a function that
-really doesn’t belong in notebooks.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(geyser)</span></code></pre></div>
 <p>You can also click on the geyser object in the
 <code>Enviornment</code> tab to open up the same spreadsheet view of the
 data.</p>
@@ -760,11 +756,11 @@ data.</p>
 in the <code>palmerpenguins</code> package. Assign it to a new object
 called <code>penguin</code> and use the <code>str()</code> function to
 explore its contents:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load data</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>penguin <span class="ot">&lt;-</span> penguins</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># explore</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(penguin)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># load data</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>penguin <span class="ot">&lt;-</span> penguins</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># explore</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(penguin)</span></code></pre></div>
 <pre><code>## tibble [344 × 8] (S3: tbl_df/tbl/data.frame)
 ##  $ species          : Factor w/ 3 levels &quot;Adelie&quot;,&quot;Chinstrap&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ island           : Factor w/ 3 levels &quot;Biscoe&quot;,&quot;Dream&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
@@ -780,19 +776,19 @@ about the purposes of specific blocks of code.</p>
 <h2 id="working-with-functions">Working with Functions</h2>
 <p>So far, all of the functions that we have used have taken a single
 argument in the parentheses:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(geyser)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(geyser)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;cowsay&quot;</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(geyser)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(geyser)</span></code></pre></div>
 <p>Function calls can be made more complex in two ways. First, functions
 can be <em>nested</em> within each other. For instance, if we want to
 generate a list of the animals included in <code>cowsay</code>, we could
 try to print the <code>animals</code> object. It is quite messy, so we
 won’t do it in the notebook, but you can try in the console if you’d
 like:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>animals</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>animals</span></code></pre></div>
 <p>To extract just the names, we can use the <code>names()</code>
 function:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(animals)</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(animals)</span></code></pre></div>
 <pre><code>##  [1] &quot;cow&quot;          &quot;chicken&quot;      &quot;chuck&quot;        &quot;clippy&quot;       &quot;poop&quot;         &quot;bigcat&quot;       &quot;ant&quot;          &quot;pumpkin&quot;      &quot;ghost&quot;        &quot;spider&quot;       &quot;rabbit&quot;      
 ## [12] &quot;pig&quot;          &quot;snowman&quot;      &quot;frog&quot;         &quot;hypnotoad&quot;    &quot;shortcat&quot;     &quot;longcat&quot;      &quot;fish&quot;         &quot;signbunny&quot;    &quot;facecat&quot;      &quot;behindcat&quot;    &quot;stretchycat&quot; 
 ## [23] &quot;anxiouscat&quot;   &quot;longtailcat&quot;  &quot;cat&quot;          &quot;trilobite&quot;    &quot;shark&quot;        &quot;buffalo&quot;      &quot;grumpycat&quot;    &quot;smallcat&quot;     &quot;yoda&quot;         &quot;mushroom&quot;     &quot;endlesshorse&quot;
@@ -801,7 +797,7 @@ function:</p>
 alphabetical order, so we’ll <em>wrap</em> the
 <code>names(animals)</code> function call in the <code>sort()</code>
 function:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">names</span>(animals))</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(<span class="fu">names</span>(animals))</span></code></pre></div>
 <pre><code>##  [1] &quot;ant&quot;          &quot;anxiouscat&quot;   &quot;bat&quot;          &quot;bat2&quot;         &quot;behindcat&quot;    &quot;bigcat&quot;       &quot;buffalo&quot;      &quot;cat&quot;          &quot;chicken&quot;      &quot;chuck&quot;        &quot;clippy&quot;      
 ## [12] &quot;cow&quot;          &quot;daemon&quot;       &quot;duck&quot;         &quot;duckling&quot;     &quot;egret&quot;        &quot;endlesshorse&quot; &quot;facecat&quot;      &quot;fish&quot;         &quot;frog&quot;         &quot;ghost&quot;        &quot;grumpycat&quot;   
 ## [23] &quot;hypnotoad&quot;    &quot;longcat&quot;      &quot;longtailcat&quot;  &quot;monkey&quot;       &quot;mushroom&quot;     &quot;owl&quot;          &quot;pig&quot;          &quot;poop&quot;         &quot;pumpkin&quot;      &quot;rabbit&quot;       &quot;shark&quot;       
@@ -811,7 +807,7 @@ this with caution - the more times you nest within a function, the
 harder it becomes to read and de-bug!</p>
 <p>The second way we can extend functions is by specifying multiple
 arguments:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;gobble gobble&quot;</span>, <span class="at">by =</span> <span class="st">&quot;turkey&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;gobble gobble&quot;</span>, <span class="at">by =</span> <span class="st">&quot;turkey&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  ------------- 
 ## gobble gobble 
@@ -836,7 +832,7 @@ arguments:</p>
 specific pieces of information. Always name the parameters - it makes
 your function easier to debug and more explicit!</p>
 <p>Now, your turn. Pick a new animal and give it its own message:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;do or do not, there is no try&quot;</span>, <span class="at">by =</span> <span class="st">&quot;yoda&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">say</span>(<span class="at">what =</span> <span class="st">&quot;do or do not, there is no try&quot;</span>, <span class="at">by =</span> <span class="st">&quot;yoda&quot;</span>)</span></code></pre></div>
 <pre><code>## 
 ##  ----- 
 ## do or do not, there is no try 
@@ -884,16 +880,16 @@ your function easier to debug and more explicit!</p>
 easy way to bring up documentation files in the <code>Help</code> tab in
 the lower right-hand corner. The first is the single question mark,
 which can be used with a package name:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>?base</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>?base</span></code></pre></div>
 <p>The single question mark can also be used with a function name:</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>?install.packages</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>?install.packages</span></code></pre></div>
 <p>If you don’t find what you need, or a package/function does not have
 help files created for you, you can use the double question mark
 operator to search for additional resources:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>??cowsay</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>??cowsay</span></code></pre></div>
 <p>Now, you try getting help for the <code>palmerpenguins</code>
 package:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>?palmerpenguins</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>?palmerpenguins</span></code></pre></div>
 <p>There are other great resources for getting help, such as the <a href="https://community.rstudio.com">RStudio Community</a> and Hadley
 Wickham’s <a href="https://r4ds.had.co.nz"><em>R for Data
 Science</em></a> book. Package websites often have tutorials, called
@@ -910,7 +906,7 @@ to grasp concept at first. Think of it as a postal address - this is
 where <code>R</code> will expect all information to come from and go to
 about a project. You can view the current working directory with
 <code>getwd()</code>:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Users/prenec/Documents/GitHub/data_skills/data-skills-01/notebook&quot;</code></pre>
 <p>R projects create a home for your analyses. When you set a R project
 up, it will change the <strong>working directory</strong> to the

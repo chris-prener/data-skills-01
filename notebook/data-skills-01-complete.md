@@ -215,14 +215,6 @@ We’ve got two variables - one named `eruptions` and one named `waiting`.
 A **data frame** is a collection of vectors that all have the same
 length.
 
-Next, we can use `View()` to open a spreadsheet like view of the data.
-Type this down in your console - it is a function that really doesn’t
-belong in notebooks.
-
-``` r
-View(geyser)
-```
-
 You can also click on the geyser object in the `Enviornment` tab to open
 up the same spreadsheet view of the data.
 
