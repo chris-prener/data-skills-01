@@ -1,7 +1,7 @@
 Data Skills 01 - Introduction to RStudio and R Projects (Complete)
 ================
 Christopher Prener, Ph.D.
-(September 20, 2022)
+(September 21, 2022)
 
 ## R and RStudio Basics
 
@@ -15,12 +15,10 @@ they are not part of the basic R releases.
 ### R Notebooks
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you
-execute code within the notebook, the results appear beneath the code.
-We’ll use notebooks throughout the seminar series. Before each session,
-we’ll post a notebook on Github with certain code missing so that you
-can follow along and practice writing code. After each session, we’ll
-post a complete notebook with the “answers” so that you can go over it
-after the session or get caught up if you missing a session.
+execute code within the notebook, the results appear beneath the code. I
+like to teach with notebooks, and use R Markdown more generally for
+statistical work when I want to start drafting both data/methods and
+results text.
 
 Try executing this chunk by clicking the *Run* button within the chunk
 (a green right-facing arrow that is reminiscent of a play button).
@@ -32,14 +30,17 @@ plot(cars)
 ![](data-skills-01-complete_files/figure-gfm/test-chunk-1.png)<!-- -->
 
 Add a new chunk by clicking the *Insert* button on the toolbar and
-choosing `R`.
+choosing `R`. Notice that you can also with Python and SQL, among other
+languages.
 
 When you save the notebook, an `html` file containing the code and
-output will be saved alongside it (click the *Preview* button or press
-*Cmd+Shift+K* to preview the `html` file). The `html` file will always
-be saved in the directory that your R Markdown file is saved in.
+output will be saved alongside it. The `html` file will always be saved
+in the directory that your R Markdown file is saved in. Other varieties
+of R Markdown files do not produce this `html` file automatically. You
+can save this file and then click on `data-skills-01.nb.html` in the
+file pane to see the latest rendered version.
 
-If you want to create a new RMarkdown. Notebook, you can do so by going
+If you want to create a new RMarkdown Notebook, you can do so by going
 to `File > New File > R Notebook`. There is a [basic guide to writing
 with Markdown
 here](https://rmarkdown.rstudio.com/authoring_basics.html). Finally, you
@@ -47,12 +48,30 @@ should know that RStudio recently launched [Quarto](https://quarto.org),
 which is a second generation publishing platform that builds on
 RMarkdown.
 
+For less involved projects, I often use an `R` script instead. These
+files can be created by going to `File > New File > R Script` and
+contain only code and comments. You can see an example of a very simple
+script in the `source/render.R` file.
+
+### Saving Data
+
+By default, RStudio wants to save the state of environment. I generally
+think this is not a good practice from a reproducibility standpoint. To
+disable, go to Preferences and then, under the Workspace section of the
+General tab on the left, un-check “Restore .RData into workspace at
+startup” and set “Save workspace to .RData on exit” to “Never”.
+
+### Using Themes
+
+The Preferences panel also includes the option to change the appearance
+of your RStudio windows. Choose the Appearance tab on the left, and use
+the “Editor Theme” section to pick a different theme if you would like.
+
 ## Packages
 
 Packages are the way that we can extend the base R software. They are
 typically written by R users and made available for free via a series of
-servers called CRAN. (We will eventually write our own package this
-semester!)
+servers called CRAN.
 
 To install new packages, we use the `install.packages()` function where
 the package name is written inside the parentheses in double quotes -
@@ -104,6 +123,13 @@ mutate()
 
 So, in this case, we would need to load the package that the `mutate()`
 function is housed in.
+
+It is possible to reference scripts in packages that have not been
+loaded by including the package name and two colons before the function:
+
+``` r
+dplyr::mutate()
+```
 
 ## Load Data
 
@@ -416,8 +442,12 @@ This means that all of the data you save from RStudio will be saved
 there by default. It also means that you can open files saved in that
 directory without needing to worry about file paths.
 
-We’ll give you an R project directory to download for each seminar
-session. However, if you want to create a new project for your own work,
-go to `File > New Project...` and follow the prompts. You can create a
-new project directory, associate a project with an existing directory,
-and even add `git` version control if you know how to use it!
+R projects can also help you navigate a wrinkle with `.Rmd` files, which
+automatically recognize the folder they reside in as the working
+directory. We’ll talk more about this next time!
+
+We’ll give you an R project directory to download for each session.
+However, if you want to create a new project for your own work, go to
+`File > New Project...` and follow the prompts. You can create a new
+project directory, associate a project with an existing directory, and
+even add `git` version control if you know how to use it!
