@@ -1,4 +1,4 @@
-# research-01 Setup
+# data-skills-01 Setup
 The following packages are required for this lesson. Base `R` packages are not included here since they are pre-installed.
 
 ### Literate Programming
